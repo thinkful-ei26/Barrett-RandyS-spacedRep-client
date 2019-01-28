@@ -1,8 +1,8 @@
 .home {
   height: 100vh;
-  /* background-image: url('../images/paris.jpg'); */
+  background-image: url('../images/paris.jpg');
   background-size: cover;
-  background: navy;
+  /* background: navy; */
 }
 
 .welcome {
@@ -16,7 +16,7 @@
 
 .welcome a {
   text-decoration: none;
-  color: lightgrey
+  color: salmon
 }
 
 a:hover {
