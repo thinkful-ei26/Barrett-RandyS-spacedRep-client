@@ -13,15 +13,17 @@ export class RegistrationForm extends React.Component {
         const user = {username, password, firstName, lastName};
         return this.props
             .dispatch(registerUser(user))
-            .then(() => this.props.dispatch(login(username, password)));
+            .then(() => this.props.dispatch(login(username, password))); 
     }
 
     render() {
         return (
             <form
                 className="login-form"
-                onSubmit={this.props.handleSubmit(values =>
-                    this.onSubmit(values)
+                onSubmit={this.props.handleSubmit(values => {
+                    console.log(values);
+                    this.onSubmit(values);
+                }
                 )}>
                 <label htmlFor="firstName">First name</label>
                 <Field component={Input} type="text" name="firstName" />
