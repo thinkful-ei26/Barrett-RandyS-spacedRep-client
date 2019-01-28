@@ -1,0 +1,28 @@
+.home {
+  height: 100vh;
+  /* background-image: url('../images/paris.jpg'); */
+  background-size: cover;
+  background: navy;
+}
+
+.welcome {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.welcome h1 {
+  color: lightgoldenrodyellow;
+}
+
+.welcome a {
+  text-decoration: none;
+  color: lightgrey
+}
+
+a:hover {
+  color: grey;
+  opacity: .7;
+}
+
+
+
