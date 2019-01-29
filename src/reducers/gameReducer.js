@@ -13,6 +13,7 @@ const initialState = {
   loading: false,
   error: null,
   userAnswer: null,
+  // correct: Boolean
 };
 
 const gameReducer = (state=initialState, action) => {
