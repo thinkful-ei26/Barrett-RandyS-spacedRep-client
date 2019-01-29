@@ -1,11 +1,15 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import AnswerSubmit from './answer-submit';
+import { fetchWord } from '../actions/index';
 
 
 import '../stylesheets/question.css'
 
 export class Question extends React.Component {
+  componentDidMount() {
+    this.props.dispatch(fetchWord());
+  }
 
   render() {
     return (
@@ -25,6 +29,7 @@ export class Question extends React.Component {
 const mapStateToProps = state => {
   return {
     showModal: state.game.showModal,
+    currentWord: state.game.currentWord,
     loggedIn: state.auth.currentUser,
   }
 }

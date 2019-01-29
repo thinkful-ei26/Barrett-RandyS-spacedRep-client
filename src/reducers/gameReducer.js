@@ -21,6 +21,7 @@ const gameReducer = (state=initialState, action) => {
   }
 
   if (action.type === FETCH_WORD_REQUEST) {
+    console.log('request dispatched');
     return Object.assign({}, state, {
       loading: true
     })

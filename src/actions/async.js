@@ -21,7 +21,7 @@ export const fetchWordError = error => ({
 // async action: dispatches async request, handles success or err actions
 export const fetchWord = () => dispatch => {
   dispatch(fetchWordRequest())
-  return fetch(`${API_BASE_URL}/api/words`)
+  return fetch(`${API_BASE_URL}/words`)
     .then(res => {
       if (!res.ok) {
         return Promise.reject(res.statusText)
