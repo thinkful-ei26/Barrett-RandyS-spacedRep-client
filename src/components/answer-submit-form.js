@@ -2,7 +2,7 @@ import React from 'react';
 import {Field, reduxForm, focus} from 'redux-form';
 import Input from './input';
 
-export class AnswerSubmit extends React.Component {
+export class AnswerSubmitForm extends React.Component {
   onSubmit(value) {
     console.log(value)
     //psuedo action call
@@ -35,4 +35,4 @@ export class AnswerSubmit extends React.Component {
 export default reduxForm({
   form: 'submit-answer-form',
   onSubmitFail: (errors, dispatch) => dispatch(focus('submit-answer-form'))
-})(AnswerSubmit);
+})(AnswerSubmitForm);

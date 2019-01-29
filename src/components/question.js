@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import AnswerSubmit from './answer-submit';
+import AnswerSubmitForm from './answer-submit-form';
 
 
 import '../stylesheets/question.css'
@@ -14,12 +14,11 @@ export class Question extends React.Component {
           <h2>Bonjour</h2>
         </div>
         <div className='english-word'>
-          <AnswerSubmit />
+          <AnswerSubmitForm />
         </div>
       </div>
     )
   }
-
 }
 
 const mapStateToProps = state => {

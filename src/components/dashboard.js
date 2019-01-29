@@ -19,9 +19,11 @@ export class Dashboard extends React.Component {
         return (
             <div className="dashboard">
                 <Navbar />
-                <Score />
-                <Question />
-                {/* <Feedback /> */}
+                <main className='game'>
+                    <Score />
+                    <Question />
+                    <Feedback />
+                </main>
             </div>
         );
     }
