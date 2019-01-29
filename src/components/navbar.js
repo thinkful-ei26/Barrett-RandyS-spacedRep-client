@@ -20,8 +20,9 @@ export class Navbar extends React.Component {
   }
 
   render() {
+    //if logged in show logout button, if not show login form
     let log;
-      if (this.props.loggedIn) {
+      if (this.props.loggedIn !== null) {
         log = (
           <button onClick={() => this.logOut()}>Log out</button>
         );
@@ -29,11 +30,22 @@ export class Navbar extends React.Component {
         log = <LoginForm />
       }
 
+    let leftNav;
+    //if logged in show welcome message, if not show infomodal
+    if (this.props.loggedIn !== null) {   
+      leftNav = (
+        <p>Welcome back, {this.props.loggedIn.username}!</p>
+      );
+    } else {
+      leftNav = (
+        <button onClick={() => this.onClick()}>What is LearnFrench?</button>
+      );
+    }
 
     return (
       <nav className='navbar'>
         <ul>
-          <li><button onClick={() => this.onClick()}>What is LearnFrench?</button></li>
+          <li>{leftNav}</li>
           <li>{log}</li>
         </ul>
       </nav>
@@ -43,7 +55,9 @@ export class Navbar extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    showModal: state.game.showModal
+    showModal: state.game.showModal,
+    loggedIn: state.auth.currentUser,
+    // username: state.auth.currentUser.username,
   }
 }
 
