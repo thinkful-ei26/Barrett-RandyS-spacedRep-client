@@ -4,10 +4,15 @@ import {connect} from 'react-redux';
 import '../stylesheets/score.css'
 
 export class Score extends React.Component {
+
   render() {
+    if (!this.props.currentWord) {
+      return null
+    }
+    
     return (
       <div className='score'>
-        <h2>0 out of 0 for this question</h2>
+        <h2>{this.props.currentWord.score.correct} out of {this.props.currentWord.score.incorrect} for this question</h2>
       </div>
     )
   }
@@ -16,9 +21,7 @@ export class Score extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    showModal: state.game.showModal,
-    loggedIn: state.auth.currentUser,
-    // username: state.auth.currentUser.username,
+    currentWord: state.game.currentWord
   }
 }
 

@@ -1,12 +1,13 @@
 import React from 'react';
-import {Field, reduxForm, focus} from 'redux-form';
+import {Field, reduxForm, focus, resetForm} from 'redux-form';
 import Input from './input';
+import {saveUserAnswer} from '../actions/game';
 
 export class AnswerSubmitForm extends React.Component {
   onSubmit(value) {
-    console.log(value)
-    //psuedo action call
-    // return this.props.dispatch(submitAnswer(value))
+    //FIGURE OUT HOW TO CLEAR INPUT FORM
+    return this.props.dispatch(saveUserAnswer(value))
+    .then(() => this.props.resetForm());
   }
 
   render() {
@@ -36,3 +37,8 @@ export default reduxForm({
   form: 'submit-answer-form',
   onSubmitFail: (errors, dispatch) => dispatch(focus('submit-answer-form'))
 })(AnswerSubmitForm);
+
+//1. check if answer is correct
+//2. dispatch updateWordAction depending on correct answer
+//3. fetchNewWord
+//4. Display new word score data

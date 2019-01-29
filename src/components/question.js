@@ -12,10 +12,17 @@ export class Question extends React.Component {
   }
 
   render() {
+    let frenchWord;
+    if (this.props.currentWord === null) {
+      frenchWord = <p>Loading...</p>
+    } else {
+      frenchWord = this.props.currentWord.frenchWord
+    }
+
     return (
       <div className='question-section'>
         <div className='french-word'>
-          <h2>Bonjour</h2>
+          <h2>{frenchWord}</h2>
         </div>
         <div className='english-word'>
           <AnswerSubmitForm />
