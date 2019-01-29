@@ -1,0 +1,11 @@
+#next-question-btn {
+  height: 28px;
+  margin: 0px 20px;
+  border-radius: 6px;
+}
+
+.feedback-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

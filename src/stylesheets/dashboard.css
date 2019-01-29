@@ -2,3 +2,8 @@
   background: lightblue;
   height: 100vh;
 }
+
+.game {
+  height: 50%;
+  margin: 40px;
+}
