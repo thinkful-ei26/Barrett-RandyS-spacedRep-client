@@ -12,7 +12,7 @@ export class Score extends React.Component {
     
     return (
       <div className='score'>
-        <h2>{this.props.currentWord.score.correct} out of {this.props.currentWord.score.attempts} for this question</h2>
+        <h2>{this.props.currentWord.correct} out of {this.props.currentWord.attempts} for this question</h2>
       </div>
     )
   }

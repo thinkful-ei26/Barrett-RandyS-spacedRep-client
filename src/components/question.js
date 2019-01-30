@@ -8,7 +8,7 @@ import '../stylesheets/question.css'
 
 export class Question extends React.Component {
   componentDidMount() {
-    this.props.dispatch(fetchWord());
+    this.props.dispatch(fetchWord(this.props.loggedIn.id));
   }
 
   render() {

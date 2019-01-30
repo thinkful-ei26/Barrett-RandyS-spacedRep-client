@@ -8,7 +8,7 @@ export class Feedback extends React.Component {
   onClick() {
     //dispatch for fetchNextWord
     console.log('button clicked')
-    this.props.dispatch(fetchWord())
+    this.props.dispatch(fetchWord(this.props.loggedIn.id));
   }
 
   render() {
@@ -37,7 +37,8 @@ export class Feedback extends React.Component {
 const mapStateToProps = state => {
   return {
     currentWord: state.game.currentWord,
-    userAnswer: state.game.userAnswer
+    userAnswer: state.game.userAnswer,
+    loggedIn: state.auth.currentUser
   }
 }
 

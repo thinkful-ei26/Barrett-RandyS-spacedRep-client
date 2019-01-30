@@ -3,7 +3,7 @@ import { API_BASE_URL } from '../config';
 // Get actions
 export const FETCH_WORD_REQUEST = 'FETCH_WORD_REQUEST'
 export const fetchWordRequest = () => ({
-  type: FETCH_WORD_REQUEST
+  type: FETCH_WORD_REQUEST,
 });
 
 export const FETCH_WORD_SUCCESS = 'FETCH_WORD_SUCCESS'
@@ -19,9 +19,9 @@ export const fetchWordError = error => ({
 });
 
 // async action: dispatches async request, handles success or err actions
-export const fetchWord = () => dispatch => {
+export const fetchWord = (userId) => dispatch => {
   dispatch(fetchWordRequest())
-  return fetch(`${API_BASE_URL}/words`)
+  return fetch(`${API_BASE_URL}/words/${userId}`)
     .then(res => {
       if (!res.ok) {
         return Promise.reject(res.statusText)
