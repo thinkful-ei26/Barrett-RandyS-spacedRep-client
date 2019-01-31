@@ -32,3 +32,20 @@ export const fetchWord = (userId) => dispatch => {
     .catch(err => dispatch(fetchWordError(err)))
 }
 
+export const updateWord = (userId, userAnswer) => {
+  return fetch(`${API_BASE_URL}/words/${userId}`, {
+    method: 'PUT',
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify(userAnswer)
+  })
+  .then(res => {
+    if (!res.ok) {
+      return Promise.reject(res.statusText)
+    }
+    return res.json()
+  })
+  // .then(success => dispatch(updateWordSucess(success)))
+  .then(err => console.log(err));
+}

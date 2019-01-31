@@ -1,13 +1,16 @@
 import React from 'react';
 import {Field, reduxForm, focus, resetForm} from 'redux-form';
+import {connect} from 'react-redux';
 import Input from './input';
 import {saveUserAnswer} from '../actions/game';
+import {updateWord} from '../actions/async'
 
 export class AnswerSubmitForm extends React.Component {
   onSubmit(value) {
     //FIGURE OUT HOW TO CLEAR INPUT FORM
-    return this.props.dispatch(saveUserAnswer(value))
-    .then(() => this.props.resetForm());
+    this.props.dispatch(saveUserAnswer(value))
+    return this.props.dispatch(updateWord(this.props.loggedIn.id, value))
+    .then((res) => console.log('rest form'));
   }
 
   render() {
@@ -32,6 +35,14 @@ export class AnswerSubmitForm extends React.Component {
     )
   }
 }
+
+const mapStateToProps = state => {
+	return {
+		loggedIn: state.auth.currentUser
+	}
+}
+
+AnswerSubmitForm = connect(mapStateToProps)(AnswerSubmitForm);
 
 export default reduxForm({
   form: 'submit-answer-form',
