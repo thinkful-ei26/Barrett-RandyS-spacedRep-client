@@ -15,7 +15,6 @@ export class Navbar extends React.Component {
   }
 
   onClick() {
-    console.log('clicked')
     this.props.dispatch(toggleModal())
   }
 

@@ -7,12 +7,10 @@ import { fetchWord } from '../actions';
 export class Feedback extends React.Component {
   onClick() {
     //dispatch for fetchNextWord
-    console.log('button clicked')
     this.props.dispatch(fetchWord(this.props.loggedIn.id));
   }
 
   render() {
-    console.log(this.props.userAnswer)
     let message;
     let nextBtn;
 
@@ -22,8 +20,6 @@ export class Feedback extends React.Component {
       message = <p>Nice job! '{this.props.currentWord.englishWord}' is the right answer!</p>;
       nextBtn = <button id='next-question-btn' onClick={() => this.onClick()}>Next</button>
     } else {
-      console.log('user answer', this.props.userAnswer.englishWord)
-      console.log('current word', this.props.currentWord.englishWord)
       message = <p>Oops! The correct answer was '{this.props.currentWord.englishWord}''.</p>;
       nextBtn = <button id='next-question-btn' onClick={() => this.onClick()}>Next</button>
     }

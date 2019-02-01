@@ -47,5 +47,5 @@ export const updateWord = (userId, userAnswer) => {
     return res.json()
   })
   // .then(success => dispatch(updateWordSucess(success)))
-  .then(err => console.log(err));
+  .catch(err => console.log(err));
 }

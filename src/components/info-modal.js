@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 
 import '../stylesheets/info-modal.css'
-import { toggleModal } from '../actions/game';
 
 export class InfoModal extends React.Component {
   // onClick() {

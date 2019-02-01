@@ -11,13 +11,13 @@ https://github.com/thinkful-ei26/Barrett-RandyS-spacedRep-server.git
 ### Screenshots:
 
 - Default view:
-![alt text](https://i.imgur.com/Xz8SI8A.png)
+![alt text](https://i.imgur.com/zDIMmud.png)
 - Help window:
-![alt text](https://i.imgur.com/NAGgrL7.png)
-- Creating a route:
-![alt text](https://i.imgur.com/NIei5JJ.png)
-- Viewing a saved route:
-- ![alt text](https://i.imgur.com/Xz8SI8A.png)
+![alt text](https://i.imgur.com/VG9VARM.png)
+- Game:
+![alt text](https://i.imgur.com/rbdKO0H.png)
+- Register user:
+- ![alt text](https://i.imgur.com/f5bhi4e.png)
 
 ### Tech stack:
 

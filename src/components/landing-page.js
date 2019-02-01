@@ -11,7 +11,6 @@ export class LandingPage extends React.Component {
 
     //how to get this Redirect working?
     onClick() {
-        console.log('clicked')
         return <Redirect to="/register" />
     }
 
@@ -26,7 +25,7 @@ export class LandingPage extends React.Component {
         }
 
         return (
-            <main>
+            <section>
                 {infoModal}
                 <div className="home">
                 <Navbar />
@@ -38,7 +37,7 @@ export class LandingPage extends React.Component {
                         <button id="register-btn" onClick={() => this.onClick()}><Link to="/register">Register now!</Link></button>
                     </section>
                 </div>
-            </main>
+            </section>
         );
     }
 

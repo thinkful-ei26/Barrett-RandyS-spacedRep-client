@@ -1,11 +1,10 @@
-'use strict';
 import { TOGGLE_MODAL } from '../actions/game';
 
 import { FETCH_WORD_REQUEST,
   FETCH_WORD_SUCCESS,
   FETCH_WORD_ERROR,
   SAVE_USER_ANSWER,
-  fetchWord } from '../actions/index';
+} from '../actions/index';
 
 const initialState = {
   showModal: false,
@@ -24,7 +23,6 @@ const gameReducer = (state=initialState, action) => {
   }
 
   if (action.type === FETCH_WORD_REQUEST) {
-    console.log('request dispatched');
     return Object.assign({}, state, {
       userAnswer: null,
       loading: true
@@ -43,7 +41,6 @@ const gameReducer = (state=initialState, action) => {
       error: action.error
     })
   } else if (action.type === SAVE_USER_ANSWER) {
-    console.log('action dispatched', action.word)
     return Object.assign({}, state, {
       userAnswer: action.word
     })

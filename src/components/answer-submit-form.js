@@ -9,8 +9,9 @@ export class AnswerSubmitForm extends React.Component {
   onSubmit(value) {
     //FIGURE OUT HOW TO CLEAR INPUT FORM
     this.props.dispatch(saveUserAnswer(value))
+    this.props.dispatch(reset('submit-answer-form'));
     return this.props.dispatch(updateWord(this.props.loggedIn.id, value))
-    .then((res) => console.log('rest form'));
+    // .then((res) => console.log('reset form'));
   }
 
   render() {
@@ -47,7 +48,6 @@ AnswerSubmitForm = connect(mapStateToProps)(AnswerSubmitForm);
 export default reduxForm({
   form: 'submit-answer-form',
   onSubmitFail: (errors, dispatch) => dispatch(focus('submit-answer-form')),
-  onSubmitSuccess: (result, dispatch) => dispatch(reset('submit-answer-form')) // new for reset input
 })(AnswerSubmitForm);
 
 //1. check if answer is correct
