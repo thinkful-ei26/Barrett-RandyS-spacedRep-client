@@ -1,0 +1,48 @@
+.registration h2 {
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+
+.registration {
+  border: 1px solid grey;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 40px;
+  text-align: center;
+  background: #efefef;
+  border: solid 1px #efefef;
+  border-radius: 2px;
+  box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.1)
+}
+
+.registration a {
+  text-decoration: none;
+  color: black;
+}
+
+#submit-registration-btn {
+  margin: 20px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background: skyblue;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  border: 1px;
+  font-weight: bold;
+  color: #140B6A;
+}
+
+#back-to-login {
+  text-decoration: none;
+  color: darkblue;
+}
+
+.form-input input {
+  padding: 4px 8px;
+  margin-bottom: 4px;
+  border-radius: 2px;
+  border: none;
+  margin-top: 3px;
+  box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.2);
+  color: #140B6A;
+  font-size: 16px;
+}

@@ -24,7 +24,7 @@ export class Navbar extends React.Component {
     let log;
       if (this.props.loggedIn !== null) {
         log = (
-          <button onClick={() => this.logOut()}>Log out</button>
+          <button id='logout-btn' onClick={() => this.logOut()}>Log out</button>
         );
       } else {
         log = <LoginForm />
@@ -38,7 +38,7 @@ export class Navbar extends React.Component {
       );
     } else {
       leftNav = (
-        <button onClick={() => this.onClick()}>What is LearnFrench?</button>
+        <button id='info-btn' onClick={() => this.onClick()}>What is LearnFrench?</button>
       );
     }
 

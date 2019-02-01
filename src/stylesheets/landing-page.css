@@ -1,28 +1,37 @@
 .home {
   height: 100vh;
-  background-image: url('../images/paris.jpg');
+  background-image: url('../images/france-flig.jpg');
   background-size: cover;
   /* background: navy; */
 }
 
 .welcome {
   text-align: center;
-  margin-top: 200px;
+  margin-top: 158px;
 }
 
 .welcome h1 {
-  color: lightgoldenrodyellow;
+  color: #140B6A;
+  font-size: 40px;
+  font-style: italic;
+  margin-bottom: 18px;
 }
 
 .welcome a {
   text-decoration: none;
-  color: salmon
+  color: #140B6A;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 a:hover {
-  color: grey;
   opacity: .7;
 }
 
+#register-btn {
+  padding: 12px 30px;
+  border-radius: 4px;
+  background-color: #EB2A3D;
+}
 
 

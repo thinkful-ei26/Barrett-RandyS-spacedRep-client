@@ -1,9 +1,13 @@
 .dashboard {
-  background: lightblue;
+  background-image: url('../images/france-flig.jpg');
+  background-size: cover;
   height: 100vh;
 }
 
 .game {
-  height: 50%;
+  height: 75%;
   margin: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }

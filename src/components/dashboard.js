@@ -16,15 +16,20 @@ export class Dashboard extends React.Component {
     }
 
     render() {
+        let feedBack; 
+        if (this.props.userAnswer) {
+            feedBack = <Feedback />
+        }
+
         return (
-            <div className="dashboard">
+            <section className="dashboard">
                 <Navbar />
-                <main className='game'>
+                <section className='game'>
                     <Score />
                     <Question />
-                    <Feedback />
-                </main>
-            </div>
+                    {feedBack}
+                </section>
+            </section>
         );
     }
 }
@@ -32,6 +37,7 @@ export class Dashboard extends React.Component {
 const mapStateToProps = state => {
     const {currentUser} = state.auth;
     return {
+        userAnswer: state.game.userAnswer,
         username: state.auth.currentUser.username,
         name: `${currentUser.firstName} ${currentUser.lastName}`,
         protectedData: state.protectedData.data

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Field, reduxForm, focus, resetForm} from 'redux-form';
+import {Field, reduxForm, focus, reset} from 'redux-form';
 import {connect} from 'react-redux';
 import Input from './input';
 import {saveUserAnswer} from '../actions/game';
@@ -28,7 +28,7 @@ export class AnswerSubmitForm extends React.Component {
         id="englishWord"
       />
 
-      <button disabled={this.props.pristine || this.props.submitting}>
+      <button id='answer-submit-btn' disabled={this.props.pristine || this.props.submitting}>
         Submit
       </button>
     </form>
@@ -46,7 +46,8 @@ AnswerSubmitForm = connect(mapStateToProps)(AnswerSubmitForm);
 
 export default reduxForm({
   form: 'submit-answer-form',
-  onSubmitFail: (errors, dispatch) => dispatch(focus('submit-answer-form'))
+  onSubmitFail: (errors, dispatch) => dispatch(focus('submit-answer-form')),
+  onSubmitSuccess: (result, dispatch) => dispatch(reset('submit-answer-form')) // new for reset input
 })(AnswerSubmitForm);
 
 //1. check if answer is correct

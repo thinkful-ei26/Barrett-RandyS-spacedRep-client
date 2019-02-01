@@ -20,14 +20,14 @@ export class Question extends React.Component {
     }
 
     return (
-      <div className='question-section'>
-        <div className='french-word'>
+      <section className='question-section'>
+        <div className='box french-word'>
           <h2>{frenchWord}</h2>
         </div>
-        <div className='english-word'>
+        <div className='box english-word'>
           <AnswerSubmitForm />
         </div>
-      </div>
+      </section>
     )
   }
 }

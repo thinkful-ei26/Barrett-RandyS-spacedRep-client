@@ -18,9 +18,9 @@ export class HeaderBar extends React.Component {
             );
         }
         return (
-            <div className="header-bar">
+            <section className="header-bar">
                 {logOutButton}
-            </div>
+            </section>
         );
     }
 }

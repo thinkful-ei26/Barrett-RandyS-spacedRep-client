@@ -9,11 +9,11 @@ export class Score extends React.Component {
     if (!this.props.currentWord) {
       return null
     }
-    
+
     return (
-      <div className='score'>
+      <section className='score'>
         <h2>{this.props.currentWord.correct} out of {this.props.currentWord.attempts} for this question</h2>
-      </div>
+      </section>
     )
   }
 

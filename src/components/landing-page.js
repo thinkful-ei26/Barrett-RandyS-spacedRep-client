@@ -32,11 +32,10 @@ export class LandingPage extends React.Component {
                 <Navbar />
                     <section className='welcome'>
                         <header>
-                            <h1>LearnFrench</h1>
+                            <h1>FrenchMate</h1>
                         </header>
                         
-                        <button onClick={() => this.onClick()}><Link to="/register">Register now!</Link></button>
-                        
+                        <button id="register-btn" onClick={() => this.onClick()}><Link to="/register">Register now!</Link></button>
                     </section>
                 </div>
             </main>

@@ -1,11 +1,26 @@
 #next-question-btn {
-  height: 28px;
-  margin: 0px 20px;
-  border-radius: 6px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  border: 1px;
+  margin-left: 30px;
+  color: #140B6A;
+  font-weight: bold;
 }
 
 .feedback-section {
   display: flex;
-  justify-content: center;
   align-items: center;
+  width: 68%;
+  margin: 8px auto;
+  justify-content: center;
+  background: lightgrey;
+  border-radius: 4px;
+  box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.2);
+  padding: 10px;
+  color: #140B6A;
+}
+
+h2 {
+  color: #140B6A;
 }

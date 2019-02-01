@@ -3,7 +3,34 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 40px;
-  align-items: center;
   margin: 0px;
   color: lightgoldenrodyellow
 }
+
+#info-btn {
+  padding: 12px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #140B6A;
+  margin-top: 20px;
+  opacity: .7;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.navbar p {
+  color: #140B6A;
+  font-weight: bold;
+}
+
+#logout-btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  border: 1px;
+  margin-left: 30px;
+  color: black;
+  font-weight: bold;
+}
+
+

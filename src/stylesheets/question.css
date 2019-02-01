@@ -2,7 +2,45 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
-  margin: auto auto;
+  width: 70%;
+  margin: 0px auto;
   height: 50%;
+}
+
+.box {
+  border: solid 1px lightgrey;
+  height: 200px;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: lightgrey;
+  border-radius: 4px;
+  box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.2)
+}
+
+.english-word {
+  display: flex;
+  text-align: center;
+}
+
+#englishWord {
+  padding: 12px;
+  width: 150px;
+  border-radius: 2px;
+  border: none;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 50px 0px rgba(0,0,0,0.2);
+  color: #140B6A;
+  font-size: 16px;
+}
+
+#answer-submit-btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  background: skyblue;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  border: 1px;
+  font-weight: bold;
+  color: #140B6A;
 }

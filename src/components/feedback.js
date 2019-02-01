@@ -14,22 +14,25 @@ export class Feedback extends React.Component {
   render() {
     console.log(this.props.userAnswer)
     let message;
+    let nextBtn;
 
     if (!this.props.userAnswer) {
       message = ''
     } else if (this.props.userAnswer.englishWord === this.props.currentWord.englishWord){
-      message = <p>Nice job! {this.props.currentWord.englishWord} is the right answer!'</p>;
+      message = <p>Nice job! '{this.props.currentWord.englishWord}' is the right answer!</p>;
+      nextBtn = <button id='next-question-btn' onClick={() => this.onClick()}>Next</button>
     } else {
       console.log('user answer', this.props.userAnswer.englishWord)
       console.log('current word', this.props.currentWord.englishWord)
-      message = <p>'Oops! The correct answer was {this.props.currentWord.englishWord}.'</p>;
+      message = <p>Oops! The correct answer was '{this.props.currentWord.englishWord}''.</p>;
+      nextBtn = <button id='next-question-btn' onClick={() => this.onClick()}>Next</button>
     }
 
     return (
-      <div className='feedback-section'>
+      <article className='feedback-section'>
         {message}
-        <button id='next-question-btn' onClick={() => this.onClick()}>Next</button>
-      </div>
+        {nextBtn}
+      </article>
     )
   }
 }
