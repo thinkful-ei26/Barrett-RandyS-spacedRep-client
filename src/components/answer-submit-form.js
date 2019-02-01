@@ -1,5 +1,5 @@
 import React from 'react';
-import {Field, reduxForm, focus, resetForm} from 'redux-form';
+import {Field, reduxForm, focus, reset} from 'redux-form';
 import {connect} from 'react-redux';
 import Input from './input';
 import {saveUserAnswer} from '../actions/game';
@@ -9,8 +9,9 @@ export class AnswerSubmitForm extends React.Component {
   onSubmit(value) {
     //FIGURE OUT HOW TO CLEAR INPUT FORM
     this.props.dispatch(saveUserAnswer(value))
+    this.props.dispatch(reset('submit-answer-form'));
     return this.props.dispatch(updateWord(this.props.loggedIn.id, value))
-    .then((res) => console.log('rest form'));
+    // .then((res) => console.log('reset form'));
   }
 
   render() {
