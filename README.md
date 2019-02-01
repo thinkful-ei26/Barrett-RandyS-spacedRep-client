@@ -15,7 +15,7 @@ https://github.com/thinkful-ei26/Barrett-RandyS-spacedRep-server.git
 - Help window:
 ![alt text](https://i.imgur.com/VG9VARM.png)
 - Game:
-![alt text](https://i.imgur.com/rbdKO0H.png)
+![alt text](https://i.imgur.com/siK1wCg.png)
 - Register user:
 - ![alt text](https://i.imgur.com/f5bhi4e.png)
 
