@@ -10,7 +10,7 @@ https://github.com/thinkful-ei26/Barrett-RandyS-spacedRep-server.git
 
 ### Screenshots:
 
-- Default view:
+- Landing page:
 ![alt text](https://i.imgur.com/zDIMmud.png)
 - Help window:
 ![alt text](https://i.imgur.com/VG9VARM.png)
