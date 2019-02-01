@@ -10,15 +10,16 @@
 
 .feedback-section {
   display: flex;
-  align-items: center;
-  width: 68%;
-  margin: 8px auto;
-  justify-content: center;
-  background: lightgrey;
-  border-radius: 4px;
-  box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.2);
-  padding: 10px;
-  color: #140B6A;
+    align-items: center;
+    max-width: 50%;
+    margin: 8px auto;
+    justify-content: center;
+    background: lightgrey;
+    border-radius: 4px;
+    box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.2);
+    padding: 16px 80px;
+    color: #140B6A;
+    flex-wrap: wrap;
 }
 
 h2 {
