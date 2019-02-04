@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
+import {toggleModal} from '../actions/game';
 
 import '../stylesheets/info-modal.css'
 
@@ -9,11 +10,18 @@ export class InfoModal extends React.Component {
   //   return <Redirect to="/dashboard" />;
   // }
 
+  onClick() {
+    this.props.dispatch(toggleModal())
+  }
+
   render() {
     return (
       <div className='modal-wrapper'>
         <section className='modal-content'>
+        <article className='top-modal'>
           <h2>Welcome to FrenchMate!</h2>
+          <button id='modal-hide-btn' onClick={() => this.onClick()}>Hide</button>
+        </article>
           <article className='modal-descriptions'>
             <p>Memorizing new words can be hard, but by using our tested techniques and most
               advanced algorithms, you'll find yourself remembering French words faster than ever before

@@ -7,7 +7,7 @@ import { FETCH_WORD_REQUEST,
 } from '../actions/index';
 
 const initialState = {
-  showModal: false,
+  showModal: true,
   currentWord: null,  
   loading: false,
   error: null,
