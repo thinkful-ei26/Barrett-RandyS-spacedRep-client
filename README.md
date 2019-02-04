@@ -1,6 +1,11 @@
 ## Welcome to French Mate!
 French mate makes learning French easy and fun! Utilizing a spaced repitition algorithm in the backend to ensure that you get repeated exposure to the French words you need the most practice with. Spaced repetition is a proven learning technique that leverages dynamic intervals of time between exposure to learning materials. If there are questions that you are struggling with and get incorrect, then those questions will appear more frequently. Whereas questions that you get correct will appear less frequently. Pretty cool! We hope French Mate can help push your French knowledge to the next level!
 
+### Demo User:
+test it out with this demo user!
+username: demo
+password: password12
+
 ### Link to deployed app: 
 [https://frenchmate.herokuapp.com](https://frenchmate.herokuapp.com)
 
