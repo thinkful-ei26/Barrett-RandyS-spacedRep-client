@@ -37,7 +37,7 @@ export class Navbar extends React.Component {
       );
     } else {
       leftNav = (
-        <button id='info-btn' onClick={() => this.onClick()}>What is LearnFrench?</button>
+        <button id='info-btn' onClick={() => this.onClick()}>What is FrenchMate?</button>
       );
     }
 
