@@ -43,6 +43,24 @@ Everything lives in the src folder.<br>
  - store.js (creates redux store)
  - validators.js (holds redux-form validators)
 
+ ## API
+
+```
+/api
+.
+├── /auth
+│   └── POST
+│       ├── /login
+│       └── /refresh
+├── /users
+│   └── POST
+│       └── /
+├── /words
+│   └── GET
+│       ├── /:id
+│   └── PUT
+│       ├── /:id
+```
 
 
 
