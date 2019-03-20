@@ -31,6 +31,11 @@ export class InfoModal extends React.Component {
               on the easy words and the difficult words.
             </p>
             <p>Get started now by making an account and learning French!</p>
+            <p>Or try it out with a demo user</p>
+            <p>username: demo</p>
+            <p>password: password12</p>
+              
+            
           </article>
           <div className='sign-up'>
             <Link to="/register">Sign me up now!</Link>
